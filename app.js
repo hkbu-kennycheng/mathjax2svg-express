@@ -8,7 +8,7 @@ app.get("*", (req, res) => {
       console.log(decodeURIComponent(req.path.substr(1)));
       const svg = MathJax.tex2svg(decodeURIComponent(req.path.substr(1)));
       res.set('Content-Type', 'image/svg+xml');
-      res.status(200).send(MathJax.startup.adaptor.outerHTML(svg).replace('<mjx-container class="MathJax" jax="SVG">','').replace('</mjx-container>',''));
+      res.status(200).send(MathJax.startup.adaptor.outerHTML(svg).replace('<mjx-container class="MathJax" jax="SVG" display="true">','').replace('</mjx-container>',''));
     }).catch((err) => res.sendStatus(500));
 });
 
