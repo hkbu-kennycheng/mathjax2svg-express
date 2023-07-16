@@ -15,3 +15,9 @@ Then you could use it in your html file like this:
 ```html
 <img src="http://localhost:3000/\int_{-\infty}^\infty g(x) dx" />
 ```
+
+Or you could use our web service directly like this:
+
+```html
+<img src="https://mathjax2svg.hkbu.app/%5Cfrac{x}{x^2}" />
+```
